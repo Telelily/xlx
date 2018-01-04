@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor demo</title>
+</head>
+<body>
+
+  <!--  <div id="div1">
+    <p>初始化的内容</p>
+    <p>初始化的内容</p>
+</div>
+
+<script type="text/javascript" src="js/wangEditor.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#div1')
+    editor.create()
+</script> -->
+<div id="div1">
+</div>
+
+<script type="text/javascript" src="js/wangEditor.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#div1')
+    editor.create()
+    editor.txt.html('<p>用 JS 设置的内容</p>')
+</script>
+</body>
+</html>

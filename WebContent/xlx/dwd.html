@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor 菜单和编辑器区域分离</title>
+    <style type="text/css">
+        .toolbar {
+            border: 1px solid #ccc;
+        }
+        .text {
+            border: 1px solid #ccc;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+    <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+    <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png" style="max-width:100%;"/>
+</div>
+<button id="btn1">getJSON</button>
+
+<script type="text/javascript" src="js/wangEditor.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#div1')
+    editor.create()
+
+    document.getElementById('btn1').addEventListener('click', function () {
+        var json = editor.txt.getJSON()  // 获取 JSON 格式的内容
+        var jsonStr = JSON.stringify(json)
+        console.log(json)
+        console.log(jsonStr)
+    })
+</script>
+</body>
+</html>
